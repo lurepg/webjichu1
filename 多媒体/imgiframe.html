@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    img {
+     width: 96%;
+     padding-left: 2%;
+      /* max-width:400px ; */
+      
+}
+  </style>
+</head>
+
+<body>
+  <p>嵌套</p>
+  <!-- <iframe src="imgag.html" height="1000" width="100%" frameborder="0"></iframe> -->
+  <p>图片自适应</p>
+  <img srcset="img/1.jpg,img/2.jpg 1.5x,img/3.jpg 2x" src="img/1.jpg" alt=""> 
+  <img srcset="img/2.jpg,img/2.jpg 1.5x,img/2.jpg 2x" src="img/2.jpg" alt="">
+   <img srcset="img/1.jpg,img/1.jpg 1.5x,img/4.jpg 2x" src="img/1.jpg" alt="">
+  <img srcset="img/1.jpg,img/1.jpg 1.5x,img/5.jpg 2x" src="img/1.jpg" alt="">
+  <img srcset="img/1.jpg,img/1.jpg 1.5x,img/1.jpg 2x" src="img/1.jpg" alt="">
+  <img srcset="img/1.jpg,img/1.jpg 1.5x,img/1.jpg 2x" src="img/1.jpg" alt="">
+  <img srcset="img/1.jpg,img/1.jpg 1.5x,img/1.jpg 2x" src="img/1.jpg" alt="">
+  <img srcset="img/1.jpg,img/1.jpg 1.5x,img/1.jpg 2x" src="img/1.jpg" alt="">
+  <img srcset="img/1.jpg,img/1.jpg 1.5x,img/1.jpg 2x" src="img/1.jpg" alt="">
+  <img srcset="img/3.jpg,img/3.jpg 1.5x,img/3.jpg 2x" src="img/1.jpg" alt="Elva dressed as a fairy">
+  <br>
+  <img  srcset="img/3.jpg,img/3.jpg 1.5x,img/3.jpg 2x" src="img/3.jpg"  alt="Elva dressed as a fairy">
+  <hr>
+  <picture>
+    <source srcset="img/3.jpg" media="(min-width: 900px)">
+    <source srcset="img/2.jpg" media="(min-width: 500px)">
+    <img src="img/1.jpg" alt="MDN">
+  </picture>
+  <!-- <picture>
+    <hr>
+    <source media="(max-width: 600px)" srcset="img/1.jpg">
+    <img src="img/1.jpg" alt="Chris standing up holding his daughter Elva">
+  </picture> -->
+</body>
+
+</html>

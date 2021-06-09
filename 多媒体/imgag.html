@@ -7,32 +7,81 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
 </head>
+<style>
+  iframe {
+    border: 1px solid rgb(22, 20, 20);
+    width: 100%;
+}
 
+.output {
+    background: #eee;
+}
+</style>
 <body>
-  <h1> figure可以是几张图片、一段代码、音视频、方程、表格或别的</h1>
+
+  <figure>
+    <blockquote>
+      <h2>目录</h2>
+      <ol>
+
+        <li><a href="#h1">图片</a></li>
+        <li><a href="#h2">音频</a></li>
+        <li><a href="#iframe">iframe </a></li>
+        <li><a href="2svgimg.html">svg图片 </a></li>
+        <li><a href="imgiframe.html">图片自适应 </a></li>
+      </ol>
+    </blockquote>
+
+  </figure>
+
+  <h1 id="h1"> figure可以是几张图片、一段代码、音视频、方程、表格或别的</h1>
   <figure> 可以是几张图片、一段代码、音视频、方程、表格或别的</figure>
   <figure>
-    <img src="./img/cs.jpg" alt="头屏" srcset="">
+    <img src="./img/1.jpg" alt="图片" srcset="" width="200" title="图片">
   </figure>
   <figcaption>这是一个图片电脑我干呕顺</figcaption>
   <figure>
-    <img src="./img/cs.jpg" alt="头屏" srcset="">
+    <img src="./img/2.jpg" alt="头屏" srcset="" width="200">
     <figcaption>这是一个图片电脑我干呕顺</figcaption>
   </figure>
-  
+
 
   <figure>
-    
-    <pre>
-      
-      <img width="20" src="./img/2.jpg" alt="" srcset="">          <img width="20" src="./img/2.jpg" alt="" srcset="">
-        <img width="20" src="./img/2.jpg" alt="" srcset="">       <img width="20" src="./img/2.jpg" alt="" srcset="">
-          <img width="20" src="./img/2.jpg" alt="" srcset="">    <img width="20" src="./img/2.jpg" alt="" srcset="">
-        <img width="20" src="./img/2.jpg" alt="" srcset="">       <img width="20" src="./img/2.jpg" alt="" srcset="">
-      <img width="20" src="./img/2.jpg" alt="" srcset="">          <img width="20" src="./img/2.jpg" alt="" srcset="">
 
+    <pre>
+
+      <img width="150" src="./img/2.jpg" alt=""  srcset="">              <img width="150" src="./img/2.jpg" alt="" srcset="">
+      
         </pre>
   </figure>
+  <hr>
+  <h2 id="h2">2音频</h2>
+  <header>
+    <video controls loop autoplay="autoplay" preload="auto" width="600" poster="img/3.jpg">
+
+      <source src="img/luv.mp4" type="video/mp4">
+      <source src="img/view.webm" type="video/webm">
+      <p>你的浏览器不支持 HTML5 视频。可点击<a href="img/blp.mp4">此链接</a>观看</p>
+    </video>
+    <audio controls loop autoplay width="600">
+      <source src="img/blp.mp4" type="video/mp4">
+    </audio>
+
+  </header>
+
+  <h2 id="iframe">iframe嵌套</h2>
+  <header>
+    <iframe src="https://player.bilibili.com/player.html?aid=19390801&cid=31621681&page=1" sandbox="" scrolling="no" border="0"   framespacing="0" allowfullscreen="true"> </iframe> <p>改革春风吹满地</p>
+    <iframe id="inlineFrameExample1" sandbox=""  src="imgiframe.html" frameborder='1'></iframe>
+    <p>我要看视频</p>
+   
+  </header>
 </body>
 
 </html>
+<script>
+  // var ve = document.getElementById("inlineFrameExample1")
+  // console.log(ve);
+  
+
+</script>
