@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>主页</title>
+  <style>
+    body {
+      overflow: hidden;
+      /* overflow-y:auto; */
+    }
+
+    iframe {
+      width: 100%;
+      border: 1px solid black;
+      overflow-y: hidden;
+    }
+
+    #listnav {
+      display: flex;
+      list-style-type: none;
+      background-color: black;
+      font-size: 15px;
+      color: white;
+      padding: 10px 20px;
+      margin: 0;
+      height: 50px;
+      align-items: center;
+      box-sizing: border-box;
+    }
+  
+
+    #listnav li {
+      width: 10%;
+      font-size: 15px;
+      font-family: 'kaiti', Courier, monospace;
+      font-weight: 800;
+      text-align: center;
+      text-shadow: 1px 1px 1px #000;
+      margin-right: 10px;
+      display: block;
+      padding: 10px 10px;
+      box-sizing: border-box;
+      min-width: 120px;
+      cursor: alias;
+      
+     
+      background-color: rgba(139, 245, 153, 0.5);
+      text-shadow: -1px -1px #aaa, 0px 4px 1px rgba(0, 0, 0, 0.5), 4px 4px 5px rgba(0, 0, 0, 0.7), 0px 0px 7px rgba(0, 0, 0, 0.4);
+      /* background: linear-gradient(to left, rgba(246, 248, 248, 0.1), rgba(247, 236, 144, 0.5)); */
+    }
+
+    .csName {
+      color: red;
+      background-color: aqua;
+      align-self: end;/*选中显示第一个*/
+      order: -1;
+    }
+   
+    .csName1 {
+      color: white;
+      background-color: black;
+    }
+    
+  </style>
+</head>
+
+<body>
+  <thead>
+    <ul id="listnav">
+      <li type="./js基础认识/index.html">js基础</li>
+     
+    </ul>
+
+
+  </thead>
+
+  <iframe id="iframe1" src="./1indexcss.html" title="Example2" allowfullscreen='true' scrolling="auto"
+    allowfullscreen="" marginheight="0" marginwidth="0" frameborder="0"></iframe>
+</body>
+<script>
+  let ls = document.getElementById("iframe1")
+  ls.style.height = window.innerHeight - 23 + "px"
+console.log(window);
+  // console.log(window.document.getElementById("iframe1").src="../../cs2.html");
+
+  let navlist = document.getElementById("listnav").querySelectorAll("li")
+
+  ls.src = "./js基础认识/index.html"
+  navlist[0].className= "csName"
+
+  for (const iterator of navlist) {
+
+    iterator.onclick = function () {
+
+      for (const i in navlist) {
+       
+        if (this.type == navlist[i].type) {
+         
+          navlist[i].className = "csName"
+          document.title = this.innerHTML
+          ls.src = this.type
+        } else {
+          navlist[i].className = "csName1"
+        }
+
+      }
+    }
+  }
+</script>
+
+</html>
