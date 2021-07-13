@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>切换</title>
+  <style>
+    nav {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 0;
+      border: 1px dotted #ccc;
+      margin-bottom: 0;
+      margin-top: 20px;
+    }
+
+    ul {
+      list-style-type: none;
+      display: flex;
+      height: 20px;
+      background-color: black;
+      color: white;
+      justify-content: space-between;
+      padding: 0;
+      box-sizing: border-box;
+      padding: 0 40px;
+      margin: 0;
+    }
+
+    .itemn {
+      width: 100%;
+      height: 300px;
+      display: none;
+    }
+
+    .itemd {
+      display: block;
+      width: 100%;
+      height: 300px;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li>我是一</li>
+      <li>我是二</li>
+      <li>我是三</li>
+    </ul>
+    <div class="itemd">551</div>
+    <div class="itemn">552</div>
+    <div class="itemn">553</div>
+  </nav>
+</body>
+<script>
+  var qh = document.querySelector("ul").querySelectorAll("li")
+  var zu = document.getElementsByTagName("div")
+  var index = 0
+  let se = setInterval(function () {
+
+    console.log(index % 3);
+    let se2=0
+    if (index == se2) {
+       
+        zu[se2].className = "itemd"
+        console.log(zu[se2]);
+        se2++
+      } else {
+        
+        zu[se2].className = "itemn"
+        se2++
+      }
+      if(se2==2){
+        se2=0
+        
+      }
+      index++
+  }, 2000)
+  // for (const key in qh) {
+
+
+  //   qh[key].onclick = function () {
+  //         let cc = key
+  //         for (let i = 0; i < qh.length; i++) {
+
+
+  //           if (cc == i||index==i) {
+
+  //             zu[i].className = "itemd"
+  //             console.log(zu[i]);
+
+  //           } else {
+  //             zu[i].className = "itemn"
+  //           }
+
+  //         }
+  //       }
+
+
+  // }
+  console.log(qh);
+</script>
+
+</html>

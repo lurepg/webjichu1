@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>css3背景渐变</title>
+  <style>
+   .back{
+     height: 150px;
+     width: 100vh;
+     background-color: aqua;
+     background-image: linear-gradient(to left,rgb(214, 238, 211),rgb(51, 219, 29));
+   }
+   .back-item{
+     margin-top: 5px;
+    background-image: linear-gradient(to right,rgb(214, 238, 211),rgb(51, 219, 29));
+
+   }
+   .jianb{
+     height: 150px;
+   }
+   .jianb-item1{
+     background-image: repeating-linear-gradient(red,#000 20%,rgb(21, 158, 16) 10%);
+   }
+   .jianb-item2{
+     background-image: repeating-linear-gradient(45deg,red,#000 3%,rgb(21, 158, 16) 5%);
+   }
+   .jianb1{
+     height: 150px;
+     width: 200px;
+     background-color: aqua;
+     background-image: radial-gradient(rgb(55, 0, 255),yellow,rgb(30, 192, 43));
+   }
+   .jianb2{
+     height: 150px;
+     width: 200px;
+     background-color: aqua;
+     background-image: radial-gradient(farthest-side at 60% 55%,rgb(55, 0, 255),yellow,rgb(30, 192, 43));
+   }
+   .jianb3{
+     height: 150px;
+     width: 200px;
+     background-color: aqua;
+     background-image: radial-gradient(closest-corner at 60% 55%,rgb(55, 0, 255),yellow,rgb(30, 192, 43));
+   }
+   .jianb4{
+     height: 150px;
+     width: 200px;
+     background-color: aqua;
+     background-image: radial-gradient(farthest-corner at 60% 55%,rgb(55, 0, 255),yellow,rgb(30, 192, 43));
+   }
+  </style>
+</head>
+<body>
+  <div class="back">
+
+  </div>
+  <div class="back back-item">
+
+  </div>
+  <hr>
+  <div class="jianb jianb-item1">
+
+  </div>
+  <div class="jianb jianb-item2">
+
+  </div>
+  <div class="jianb1">
+
+  </div>
+  <div class="jianb2">
+
+  </div>
+  <div class="jianb3">
+
+  </div>
+  <div class="jianb4">
+
+  </div>
+</body>
+</html>

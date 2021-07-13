@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>字体设置</title>
+  <style>
+    .text1 .wordtext1{
+      word-spacing: 4px; /*操作空格*/
+      letter-spacing: .5em;
+    }
+    .text1 .wordtext2{
+     width: 100px;
+     height: 100px;
+     border: 1px solid;
+      letter-spacing: .5em;
+      text-overflow: ellipsis;
+      text-indent: 2em;
+      /* white-space: nowrap; */
+      overflow: hidden;
+    }
+    .text1 .textlist{
+      list-style-image: url(./img/1.jpeg);
+      
+      list-style-position: inherit;
+    }
+  </style>
+</head>
+<body>
+  <!-- 字体样式 -->
+  <h2>字体样式</h2>
+  <hr>
+  <div class="text1">
+    <p class="wordtext1">我是word-spac ing:4px</p>
+    <p class="wordtext2">我是超出隐藏我是超出隐藏我是超出隐藏我是超出隐藏我是超出隐藏</p>
+    <ul class="textlist">
+      <li>我要设置listimg</li>
+      <li>我要设置listimg</li>
+      <li>我要设置listimg</li>
+      <li>我要设置listimg</li>
+      <li>我要设置listimg</li>
+    </ul>
+  </div>
+  
+</body>
+</html>

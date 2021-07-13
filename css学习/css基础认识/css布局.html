@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <style>
+    body {
+      margin-bottom: 100px;
+    }
+
+    .myflex {
+      width: 500px;
+      height: 50px;
+      border: 1px solid;
+      display: flex;
+      margin-top: 10px;
+      padding: 10px;
+      align-items: baseline;
+      /**/
+      justify-content: space-around;
+      box-sizing: border-box;
+    }
+
+    .myflex div:nth-child(2n+0) {
+      align-self: end;
+      /*上下样式*/
+    }
+
+    .myflex div:nth-child(2n-1) {
+      align-self: center;
+      /*上下居中*/
+    }
+
+    .myflex>div {
+      /* flex: 1; */
+      background-color: aquamarine;
+      border-radius: 5px;
+      display: block;
+      padding: 10px 20px;
+      line-height: 1.5;
+      box-sizing: border-box;
+    }
+
+    /* grid布局 */
+    .myGrid {
+      padding: 10px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 100px 100px;
+      grid-gap: 10px;
+
+    }
+
+    .myGrid div {
+      background-color: aquamarine;
+      border-radius: 5px;
+    }
+
+    /* er */
+    .myGrid2 {
+      padding: 10px;
+      height: 450px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 100px 100px 100px 100px;
+      grid-gap: 10px;
+      box-sizing: border-box;
+      gap: 20px;
+    }
+
+    .myGrid2 div {
+      background-color: aquamarine;
+      border-radius: 5px;
+    }
+
+    .myGrid2 .box1grid1 {
+      grid-column: 1/2;
+      grid-row: 1/3;
+    }
+
+    .myGrid2 .box1grid2 {
+      grid-column: 2/4;
+      grid-row: 1;
+    }
+
+    .myGrid2 .box1grid3 {
+      grid-column: 2;
+      grid-row: 2/4;
+    }
+
+    .myGrid2 .box1grid4 {
+      grid-column: 3;
+      grid-row: 2/4;
+    }
+
+    /* .myGrid2 .box1grid6 {
+      grid-column: 1/1;
+      grid-row: 1;
+    } */
+    .myGrid2 .box1grid7 {
+      grid-column: 3;
+    }
+
+    /* 浮动 */
+    .myfloat {
+      width: 600px;
+      border: 1px solid #eee;
+
+    }
+
+    .myfloat .box {
+      height: 200px;
+      width: 200px;
+      border-radius: 5px;
+      background-color: blueviolet;
+      float: left;
+      margin: 20px 30px;
+      box-sizing: border-box;
+      border: 3px solid yellowgreen;
+      padding: 10px;
+    }
+
+    .myfloat p {
+      line-height: 2;
+    }
+
+    /* 浮动2 */
+    .myfloat1 {
+      width: 90%;
+      max-width: 900px;
+      margin: 0 auto;
+      border: 1px double #eee;
+      display: block;
+      overflow: auto;
+    }
+
+    .myfloat1 div:nth-of-type(1) {
+      float: left;
+      width: 48%;
+    }
+
+    .myfloat1 div:nth-of-type(2) {
+      float: right;
+      width: 48%;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    /* 网格布局 */
+    .bodydiv {
+      /* width: 980px; */
+      width: 1140px;
+      margin: 0 auto;
+      display: block;
+      overflow: auto;
+      /* clear: left; */
+    }
+
+    .bodydiv .wrapper {
+      padding-right: 20px;
+    }
+
+    .bodydiv .wrapper .row {
+      clear: both;
+    }
+
+    .bodydiv .wrapper .col {
+      float: left;
+      margin-left: 20px;
+      width: 60px;
+      background: rgb(255, 150, 150);
+    }
+
+    /* Two column widths (120px) plus one gutter width (20px) */
+    .bodydiv .wrapper .col.span2 {
+      width: 140px;
+    }
+
+    /* Three column widths (180px) plus two gutter widths (40px) */
+    .bodydiv .wrapper .col.span3 {
+      width: 220px;
+    }
+
+    .bodydiv .wrapper
+
+    /* And so on... */
+    .bodydiv .wrapper .col.span4 {
+      width: 300px;
+    }
+
+    .bodydiv .wrapper .col.span5 {
+      width: 380px;
+    }
+
+    .bodydiv .wrapper .col.span6 {
+      width: 460px;
+    }
+
+    .bodydiv .wrapper .col.span7 {
+      width: 540px;
+    }
+
+    .bodydiv .wrapper .col.span8 {
+      width: 620px;
+    }
+
+    .bodydiv .wrapper .col.span9 {
+      width: 700px;
+    }
+
+    .bodydiv .wrapper .col.span10 {
+      width: 780px;
+    }
+
+    .bodydiv .wrapper .col.span11 {
+      width: 860px;
+    }
+
+    .bodydiv .wrapper .col.span12 {
+      width: 940px;
+    }
+
+    /* 二 */
+    .bodydiv2 {
+      width: 980px;
+
+      margin: 0 auto;
+      display: block;
+      overflow: auto;
+      /* clear: left; */
+    }
+
+    .bodydiv2 .wrapper {
+      padding-right: 2.08333333%;
+    }
+
+    .bodydiv2 .wrapper .row {
+      clear: both;
+    }
+
+    .bodydiv2 .wrapper .col {
+      float: left;
+      width: 6.25%;
+      margin-right: 2.08333333%;
+      background: rgb(255, 150, 150);
+    }
+
+    .bodydiv2 .wrapper .col.span2 {
+      width: 14.5833333333%;
+    }
+
+    .bodydiv2 .wrapper .col.span3 {
+      width: 22.9166666666%;
+    }
+
+    .bodydiv2 .wrapper .col.span3 {
+      width: 22.9166666666%;
+    }
+
+    .bodydiv2 .wrapper .col.span4 {
+      width: 31.25%;
+    }
+
+    .bodydiv2 .wrapper .col.span5 {
+      width: 39.58333333%;
+    }
+
+    .bodydiv2 .wrapper .col.span6 {
+      width: 47.9166666%;
+    }
+
+    .bodydiv2 .wrapper .col.span6 {
+      width: 47.91666665%;
+    }
+
+    .bodydiv2 .wrapper .col.span7 {
+      width: 56.24999998%;
+    }
+
+    .bodydiv2 .wrapper .col.span8 {
+      width: 64.58333331%;
+    }
+
+    .bodydiv2 .wrapper .col.span9 {
+      width: 72.91666664%;
+    }
+
+    .bodydiv2 .wrapper .col.span10 {
+      width: 81.24999997%;
+    }
+
+    .bodydiv2 .wrapper .col.span11 {
+      width: 89.5833333%;
+    }
+
+    .bodydiv2 .wrapper .col.span12 {
+      width: 97.91666663%;
+    }
+
+    /* 
+.col.span2 { width: calc((6.25%*2) + 2.08333333%); }
+.col.span3 { width: calc((6.25%*3) + (2.08333333%*2)); }
+.col.span4 { width: calc((6.25%*4) + (2.08333333%*3)); }
+.col.span5 { width: calc((6.25%*5) + (2.08333333%*4)); }
+.col.span6 { width: calc((6.25%*6) + (2.08333333%*5)); }
+.col.span7 { width: calc((6.25%*7) + (2.08333333%*6)); }
+.col.span8 { width: calc((6.25%*8) + (2.08333333%*7)); }
+.col.span9 { width: calc((6.25%*9) + (2.08333333%*8)); }
+.col.span10 { width: calc((6.25%*10) + (2.08333333%*9)); }
+.col.span11 { width: calc((6.25%*11) + (2.08333333%*10)); }
+.col.span12 { width: calc((6.25%*12) + (2.08333333%*11)); }
+*/
+    * {
+      box-sizing: border-box;
+    }
+
+    .bodydiv3 {
+      background-color: aqua;
+      max-width: 400px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      /* grid-template-rows: 100px; */
+      padding: 10px;
+    }
+
+    .bodydiv3 .item {
+      background-color: aquamarine;
+      border-radius: 5px;
+      width: 33.33333%;
+      padding: 20px 0;
+    }
+
+    .bodydiv4 {
+      background-color: rgb(0, 255, 42);
+      max-width: 400px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      /* grid-template-rows: 100px; */
+      padding: 10px;
+    }
+
+    .bodydiv4 .item {
+      float: left;
+      background-color: aquamarine;
+      border-radius: 5px;
+      width: 33.33333%;
+      padding: 1em;
+    }
+
+    .bodydiv5 {
+      background-color: rgb(235, 79, 196);
+      max-width: 400px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      /* grid-template-rows: 100px; */
+      padding: 10px;
+    }
+
+    .bodydiv5 .item {
+      float: left;
+      border-radius: 5px;
+      background-color: rgb(207, 232, 220);
+      padding: 1em;
+      width: 33.333%;
+    }
+
+    @supports(display: grid) {
+
+      /* 特性查询允许你测试一个浏览器是否支持任何特定的一个CSS特性 */
+      .bodydiv5 {
+        background-color: black;
+      }
+    }
+     @supports(float: left) {
+
+      /* 特性查询允许你测试一个浏览器是否支持任何特定的一个CSS特性 */
+      .bodydiv5 .item {
+        background-color: rgb(27, 240, 80);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- flex布局 -->
+  <div class="myflex">
+    <div>one</div>
+    <div>two</div>
+    <div>htree</div>
+    <div>one</div>
+    <div>two</div>
+    <div>htree</div>
+  </div>
+  <!-- Grid布局 -->
+  <div class="myGrid">
+    <div>myGridone</div>
+    <div>myGridtwo</div>
+    <div>myGridhtree</div>
+    <div>myGridone</div>
+    <div>myGridtwo</div>
+    <div>myGridhtree</div>
+  </div>
+  <hr>
+  <div class="myGrid2">
+    <div class="box1grid1">myGridone1</div>
+    <div class="box1grid2">myGridtwo2</div>
+    <div class="box1grid3">myGridhtree3</div>
+    <div class="box1grid4">myGridone2-4</div>
+    <div class="box1grid5">myGridhtree5</div>
+    <div class="box1grid6">myGridone6</div>
+    <div class="box1grid7">myGridhtree7</div>
+  </div>
+
+  <!-- 浮动 -->
+  <h2>浮动</h2>
+  <hr>
+  <div class="myfloat">
+    <h1>Simple float example</h1>
+
+    <div class="box">Float</div>
+
+    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat
+      vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies
+      tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet orci vel,
+      viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus.
+      Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis
+      ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis, eget
+      fermentum sapien.</p>
+
+  </div>
+  <hr>
+  <div class="myfloat1">
+    <h1>2 column layout example</h1>
+    <div>
+      <h2>First column</h2>
+      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam dolor, eu lacinia lorem placerat
+        vulputate. Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at
+        ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet
+        orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis
+        lacus. Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue.
+        Duis ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis,
+        eget fermentum sapien.</p>
+    </div>
+
+    <div>
+      <h2>Second column</h2>
+      <p>Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada ultrices. Phasellus turpis est,
+        posuere sit amet dapibus ut, facilisis sed est. Nam id risus quis ante semper consectetur eget aliquam lorem.
+        Vivamus tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus sed lobortis finibus.
+        Vivamus eu urna eget velit cursus viverra quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum
+        sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+    </div>
+  </div>
+  <hr>
+  <!-- 网格布局 -->
+  <div class="bodydiv">
+
+    <div class="wrapper">
+      <div class="row">
+        <div class="col">1</div>
+        <div class="col">2</div>
+        <div class="col">3</div>
+        <div class="col">4</div>
+        <div class="col">5</div>
+        <div class="col">6</div>
+        <div class="col">7</div>
+        <div class="col">8</div>
+        <div class="col">9</div>
+        <div class="col">10</div>
+        <div class="col">11</div>
+        <div class="col">12</div>
+        <div class="col">13</div>
+        <div class="col">14</div>
+      </div>
+      <div class="row">
+        <!-- <div class="col span1">13</div>
+        <div class="col span6">14</div>
+        <div class="col span3">15</div>
+        <div class="col span2">16</div> -->
+        <div class="col span2">13</div>
+        <div class="col span2">14</div>
+
+      </div>
+    </div>
+  </div>
+  <!-- er -->
+  <hr>
+  <div class="bodydiv2">
+
+    <div class="wrapper">
+      <div class="row">
+        <div class="col">1</div>
+        <div class="col">2</div>
+        <div class="col">3</div>
+        <div class="col">4</div>
+        <div class="col">5</div>
+        <div class="col">6</div>
+        <div class="col">7</div>
+        <div class="col">8</div>
+        <div class="col">9</div>
+        <div class="col">10</div>
+        <div class="col">11</div>
+        <div class="col">12</div>
+
+      </div>
+      <div class="row">
+        <!-- <div class="col span1">13</div>
+        <div class="col span6">14</div>
+        <div class="col span3">15</div>
+        <div class="col span2">16</div> -->
+        <div class="col span4">13</div>
+        <div class="col span8">14</div>
+        <hr>
+        <div class="col span5">14</div>
+        <div class="col span5">14</div>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div>
+    <div class="bodydiv3">
+      <div class="item">Item One</div>
+      <div class="item">Item Two</div>
+      <div class="item">Item Three</div>
+    </div>
+    <hr>
+    <div class="bodydiv4">
+      <div class="item">Item One1</div>
+      <div class="item">Item Two2</div>
+      <div class="item">Item Three3</div>
+    </div>
+    <hr>
+    <div class="bodydiv5">
+      <div class="item">Item One1</div>
+      <div class="item">Item Two2</div>
+      <div class="item">Item Three3</div>
+    </div>
+  </div>
+
+</body>
+
+</html>

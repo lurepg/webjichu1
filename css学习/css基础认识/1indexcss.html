@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>开始学习CSS</title>
+    <link href='https://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="style.css">
+ 
+</head>
+
+<body>
+    
+    <!-- css表格 -->
+    <div style="padding: 0;margin: 0;width: 100%;"></div>
+        <table class="table1">
+            <caption>A summary表格 of the UK's most famous punk bands</caption>
+            <thead>
+              <tr>
+                <th scope="col">Band</th>
+                <th scope="col">Year formed</th>
+                <th scope="col">No. of Albums</th>
+                <th scope="col">Most famous song</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Buzzcocks</th>
+                <td>1976</td>
+                <td>9</td>
+                <td>Ever fallen in love (with someone you shouldn't've)</td>
+              </tr>
+              <tr>
+                <th scope="row">The Clash</th>
+                <td>1976</td>
+                <td>6</td>
+                <td>London Calling</td>
+            </tr>
+                <tr>
+                <th scope="row">The Stranglers</th>
+                <td>1974</td>
+                <td>17</td>
+                <td>No More Heroes</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <th scope="row" colspan="2">Total albums</th>
+                <td colspan="2">77</td>
+              </tr>
+            </tfoot>
+          </table>
+    </div>
+    <hr>
+      <!-- 图片处理object-fit: cover -->
+    <div class="wrapper">
+        <div class="boximg"><img src="img/1.jpeg" alt="balloons" class="cover"></div>
+        <div class="boximg"><img src="img/2.jpg" alt="balloons" class="contain"></div>
+      </div>
+          
+    <hr>
+    <!-- 高度和长度函数 -->
+    <div class="vhc">
+        <p>10vw</p>
+        <p>10%</p>
+        <p>100vw</p>
+        <p>100%</p>
+        <p>100%-10vh</p>
+    </div>
+    <hr>
+    <!-- 盒子的显示隐藏 -->
+    <div class="bor4 ">
+       
+            <h2 class="bor-item3">盒子盒子溢出Physical Properties</h2>
+            <p>A pgfd换开鼓捣鼓捣关看到过aragraph. Demonstrating Logical Properties inA pgfd换开鼓捣鼓捣关看到过aragraph. Demonstrating Logical Properties in CSSA pgfd换开鼓捣鼓捣关看到过aragraph. Demonstrating Logical Properties in CSS CSS.</p>
+       
+    </div>
+    <!-- 盒子二 -->
+    <div class="bor3 ">
+        <div class="bors bor3ite">
+            <h2 class="bor-item">Physical Properties</h2>
+            <p>A paragraph. Demonstrating Logical Properties in CSS.</p>
+        </div>
+    </div>
+    <!-- 处理不同文本 -->
+    <div class="tx1">
+        <p class="tx1-item">Play with writing modes vertical-lr</p>
+        <p class="tx1-item2">Play with writing modes vertical-rl</p>
+        <p class="tx1-item3">Play with writing modes horizontal-t</p>
+    </div>
+    <hr>
+    <!-- 背景图片 -->
+    <div class="ba1">
+        <h1 class="ba-item">我是盒子</h1>
+
+    </div>
+
+    <!-- 盒子 -->
+
+    <div style="border: 2px solid;">
+        <div class="bor1">我是盒子</div>
+        <div class="bor2">我是盒子2</div>
+    </div>
+    <!-- html -->
+    <h1>我是一级标题</h1>
+
+    <p>这是一个段落文本. 在文本中有一个 <span>span element</span>
+        并且还有一个 <a href="http://example.com">链接</a>.</p>
+
+    <p>这是第二段. 包含了一个 <em>强调</em> 元素.</p>
+
+    <ul>
+        <li>项目1</li>
+        <li class="instaer">项目2</li>
+        <li><span class="instaer1">fd</span> 项目 <em>三</em></li>
+    </ul>
+    <hr>
+    <div class="outer">
+        <div class="box">The inner box is 90% - 30px.</div>
+    </div>
+    <div class="box1"></div>
+    <!-- <div class="box2">欢迎光临</div> -->
+    <div class="box3">光临</div>
+    <div class="box4">55光临</div>
+    <hr>
+    <!-- css继承 -->
+    <ol>
+        <li class="my-s0">我是一级标题 <a href="#">超链接0</a></li>
+        <li class="my-s1">我是一级标题 <a href="#">超链接1</a></li>
+        <li class="my-s2">我是一级标题 <a href="#">超链接2</a></li>
+        <li class="my-s3">我是一级标题 <a name="haha" href="httec#">超链接3</a></li>
+        <li class="my-s4">我是一级标题 <a href="#">超链接0</a></li>
+        <li class="my-s4">我是一级标题 <a href="#">超链接2</a></li>
+    </ol>
+    <ul class="xiangling">
+        <li class="my-x0">我是一级标题 <a href="#">超链接0</a></li>
+        <li class="my-x1">我是一级标题 <a href="#">超链接1</a></li>
+        <li class="my-x2">我是一级标题 <a href="#">超链接2</a></li>
+
+    </ul>
+    <ul class="xiangling1">
+        <li name="my1-x0" class="my1-x0">我是一级标题 <a href="#">超链接0</a></li>
+        <li name="my1-x1" class="my1-x1">我是一级标题 <a href="#">超链接1</a></li>
+        <li name="m1-x2" class="my1-x2">我是一级标题 <a href="#">超链接2</a></li>
+        <li class="my1-x2">我是一级标题 <a href="#">超链接2</a></li>
+    </ul>
+    <ul class="xiangling2">
+        <li name="my1-x0" class="my1-x0">我是一级标题 <a href="#">超链接0</a></li>
+        <li name="my1-x1" class="my1-x1">我是一级标题 <a href="#">超链接1</a></li>
+        <li name="m1-x2" class="my1-x2">我是一级标题 <a href="#">超链接2</a></li>
+        <li name="m1-x2" class="my1-x2">我是一级标题 <a href="#">超链接2</a></li>
+        <li name="my1-x0" class="my1-x0">我是一级标题 <a href="#">超链接0</a></li>
+        <li name="my1-x1" class="my1-x1">我是一级标题 <a href="#">超链接1</a></li>
+        <li name="m1-x2" class="my1-x2">我是一级标题 <a href="#">超链接2</a></li>
+        <li name="m1-x2" class="my1-x2">我是一级标题 <a href="#">超链接2</a></li>
+    </ul>
+</body>
+<script>
+
+</script>
+
+</html>
