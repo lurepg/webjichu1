@@ -1,0 +1,364 @@
+@import 'style1.css';
+li.instaer,span.instaer1{
+  color: aqua;
+  letter-spacing: 5px;
+}
+h1+p{
+  font-size: 50px;
+}
+.outer {
+  border: 5px solid black;
+}
+.box{
+  padding: 10px;
+  width: calc(90% - 30px);
+ 
+  background-color: yellow;
+  color: white;
+}
+.box1{
+width: 200px;
+height: 200px;
+background-color: aqua;
+transform: rotate(0.9turn);
+}
+.box2{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 200px;
+  height: 200px;
+  background-color: yellow;
+  transform: translate(-50%,-50%);
+  }
+  .box3{
+   
+      border: solid red;
+      transform: translate(30px, -20px) rotate(20deg);
+      width: 140px;
+      height: 60px;
+  
+    }
+/* 继承 */
+ol{
+  color: aqua;
+  border: 1px solid red;
+}
+/* body{
+  color: rgb(113, 78, 209);
+  border: 1px solid rgb(190, 19, 19);
+} */
+ol::first-line{
+  color: bisque;
+  background-color: brown;
+}
+.my-s1 a{
+  color: inherit;
+  border-color: inherit;
+  border-style: dashed;
+}
+.my-s2 a{
+  
+  margin: 60px;
+  background-color: yellow;
+  all: unset;
+}
+.my-s3 a[name="haha"]{
+ 
+  font: 700 26px;
+  text-decoration: none;
+  color: blueviolet;
+}
+ol>.my-s4{
+  color: rgb(114, 191, 241);
+  background-color: aliceblue;
+}
+ol .my-s4>a{
+  color: blueviolet;
+  background-color: aliceblue;
+}
+.my-x0 + .my-x1{
+  color: rgb(230, 146, 20);
+  border: 2px solid #000;
+}
+.xiangling *::first-letter{
+  color: aquamarine;
+}
+
+.xiangling1 li[name*="x"]{
+  color: burlywood;
+}
+.xiangling1:only-child{
+  color: rgb(43, 31, 206);
+}
+.xiangling1::after{
+  content: "";
+  display: block;
+  border-top: 2px solid #000;
+}
+.xiangling1::before{
+  content: "djfjfk";
+  display: block;
+  border-top: 2px solid rgb(226, 19, 19);
+}
+.xiangling2>.my1-x0~li{
+  color: rgb(243, 20, 31);
+}
+.xiangling2 li[name*="m"]{
+  border: 2px solid;
+}
+.bor1{
+  border: 5px solid #000;
+  padding: 10px;
+  height: 150px;
+  width: 200px;
+  margin: 20px;
+  background-color: aquamarine;
+  
+}
+.bor2{
+  border: 5px solid #000;
+  padding: 10px;
+  height: 120px;
+  width: 170px;
+  margin: 20px;
+  background-color: rgb(127, 255, 144);
+  
+}
+*,*::after,*::before{
+  box-sizing: border-box;
+}
+/* 背景 */
+.ba1{
+  width: 500px;
+  height: 500px;
+  background-color: rgb(0, 0, 0);
+  padding: 20px;
+  box-sizing: border-box;
+  display: inline-block;
+}
+.ba-item{
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0,0,255,0.5),rgb(20, 243, 39,0.5)),url(./img/lizard.png) no-repeat,url(./img/star.png) ;
+  background-size: contain ;
+}
+/* 处理文本 */
+.tx1{
+  width: 100%;
+  height: auto;
+  display: flex;
+  border: 2px solid;
+}
+.tx1 .tx1-item{
+  /* 显示左到右 */
+  writing-mode: vertical-lr; 
+  background-color: rgba(0,0,0,0.9);
+  font-size: 25px;
+  padding: 10px;
+  margin: 25px;
+  box-sizing: border-box;
+  padding-top: 15px;
+  color: aliceblue;
+  letter-spacing: 5px;
+  font-weight: 900;
+  /* text-align: center; */
+}
+.tx1 .tx1-item2{
+  /* 显示右到左 */
+  writing-mode: vertical-rl; 
+  background-color: rgba(0,0,0,0.9);
+  font-size: 25px;
+  padding: 10px;
+  margin: 25px;
+  box-sizing: border-box;
+  padding-top: 15px;
+  color: aliceblue;
+  letter-spacing: 5px;
+  font-weight: 900;
+  /* text-align: center; */
+}
+.tx1 .tx1-item3{
+  /* 显示横向 */
+  writing-mode: horizontal-tb; 
+  background-color: rgba(0,0,0,0.9);
+  font-size: 25px;
+  padding: 10px;
+  margin: 25px;
+  box-sizing: border-box;
+  padding-top: 15px;
+  color: aliceblue;
+  letter-spacing: 5px;
+  font-weight: 900;
+  /* text-align: center; */
+}
+.bor3{
+border: 4px solid #000;
+height: 500px;
+width: 500px;
+background-image: linear-gradient(rgba(0,255,25,0.5) 39%,rgba(0,255,255,0.5) 90%);
+}
+.bors{
+  inline-size: 200px; /*显示长度200px字体*/
+  writing-mode: horizontal-tb;
+}
+.bor3ite{
+  margin-block-start: 20px;
+  padding-inline-end: 5em;
+}
+.bor-item{
+  margin-block-start: 20px;
+    padding-inline-end: 2em;
+    /* border: 1px solid; */
+    padding-inline-start: 2px;
+    border-block-start: 5px solid #0f0;
+    border-inline-end: 5px dotted #000;
+    border-block-end: 10px double yellow;
+    border-inline-start: 3px solid #02f;
+    margin-inline-start: 10px;
+
+}
+/* 盒子溢出 */
+.bor4{
+  display:flex;
+  
+}
+.bor-item3{
+  width: 100px;
+  height: 100px;
+  border: 1px solid #000;
+ margin-right: 40px;
+ /*overflow: hidden;多出隐藏*/
+ overflow-wrap: normal;
+}
+.bor4 p{
+  width: 200px;
+  height: 100px;
+  border: 1px solid #000;
+  /* overflow: hidden; */ 
+  /*overflow: scroll; 多出滑动*/
+  overflow-y: scroll;
+}
+body{
+  /* width: 100vh; */
+  padding: 0;
+  margin: 0;
+}
+.vhc{
+  padding: 0;
+  margin: 0;
+}
+.vhc p:nth-child(1){
+  width: 10vh;
+  height: 20px;
+  background-color: #02f;
+  opacity: 0.1;
+}
+.vhc p:nth-child(2){
+  width: 10%;
+  height: 20px;
+  background-color: #02f;
+  opacity: 0.5;
+}
+.vhc p:nth-child(3){
+  width: 100vh;
+  height: 20px;
+  background-color: rgb(28, 230, 45);
+  opacity: 0.8;
+}
+.vhc p:nth-child(4){
+  width: 100%;
+  height: 20px;
+  background-color: rgb(28, 230, 45);
+  opacity: 0.9; /*透明颜色*/
+}
+.vhc p:nth-child(5){
+  width: calc(100% - 200px); /*函数*/
+  height: 20px;
+  background-color: rgb(28, 230, 45);
+  opacity: 0.3; /*透明颜色*/
+}
+/* 图片 */
+.boximg {
+  width: 200px;
+  height: 200px;
+}
+
+.boximg img {
+  height: 100%;
+  width: 100%;
+}
+
+.cover {
+  object-fit: cover; /*图片处理*/
+}
+
+.contain {
+  object-fit: contain;
+}
+/* 表格 */
+.table1{
+  border: 1px solid #000;
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+.table1 thead th,.table1 tfoot  th{
+  font-family: 'Rock Salt', cursive;
+}
+th{
+  letter-spacing: 2px;
+}
+ td{
+  letter-spacing: 1px;
+
+}
+tbody td{
+  text-align: center;
+}
+tfoot td{
+text-align: left;
+}
+thead, tfoot {
+  background: url(./img/lizard.png)  top repeat-x;
+  color: white;
+ text-shadow: 1px 1px 1px #000;
+ background-size: contain;
+}
+thead th, tfoot th, tfoot td {
+  background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.5));
+  border: 3px solid purple;
+}
+tbody tr:nth-child(odd) {
+  background-color: #ff33cc;
+}
+thead th:nth-child(1) {
+  width: 30%;
+}
+
+thead th:nth-child(2) {
+  width: 20%;
+}
+
+thead th:nth-child(3) {
+  width: 15%;
+}
+
+thead th:nth-child(4) {
+  width: 35%;
+}
+tbody tr:nth-child(even) {
+  background-color: #e495e4;
+}
+th, td {
+  padding: 20px;
+}
+caption {
+  font-family: 'Rock Salt', cursive;
+  padding: 20px;
+  font-style: italic;
+  caption-side: bottom;
+  color: #666;
+  text-align: right;
+  letter-spacing: 1px;
+}
